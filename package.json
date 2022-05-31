@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/AdamIverson/two_square#readme",
   "dependencies": {
+    "axios": "^0.27.2",
     "express": "^4.18.1"
   }
 }

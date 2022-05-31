@@ -34,7 +34,7 @@ function Test() {
       <ul>
         {test?.map((unit) => {
           return (
-            <li key={unit.id}>{unit.message}</li>
+            <li key={unit.id}>{unit.testData}</li>
           )
         })}
       </ul>

@@ -1,15 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
-import './App.css';
+import "./App.css";
 
 function App() {
   const [test, setTest] = useState([]);
 
-  useEffect
+  useEffect(() => {
+    fetch("/api")
+      .then((res) => res.json())
+      .then((data) => setTest(data.message));
+  }, []);
 
-  // function Test() {
-  //   setTest
-  // }
   return (
     <div className="App">
       <p>{!test ? "Loading..." : test}</p>

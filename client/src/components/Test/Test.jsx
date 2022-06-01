@@ -28,9 +28,9 @@ function Test() {
       <ul>
         {test?.map((unit) => {
           return (
-            <>
-              <li key={unit.id}><img src={unit.url} alt={unit.testData}/></li>
-            </>
+              <li key={unit.id}>
+                <img src={unit.url} alt={unit.testData} />
+              </li>
           );
         })}
       </ul>

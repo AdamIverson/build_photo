@@ -23,8 +23,7 @@ function Test() {
   }
 
   return (
-    <div>
-      <img src="../../../images/prime-hatclub-2022-1_orig.jpeg"/>
+    <div className="container">
       <h1>TEST</h1>
       <ul>
         {test?.map((unit) => {

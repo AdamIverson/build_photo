@@ -9,7 +9,7 @@ function Test() {
   }, []);
 
   function callAPI() {
-    console.log('in callAPI()');
+    console.log("in callAPI()");
     axios({
       method: "GET",
       url: "/api/test",
@@ -24,12 +24,15 @@ function Test() {
 
   return (
     <div>
+      <img src="../../../images/prime-hatclub-2022-1_orig.jpeg"/>
       <h1>TEST</h1>
       <ul>
         {test?.map((unit) => {
           return (
-            <li key={unit.id}>{unit.testData}</li>
-          )
+            <>
+              <li key={unit.id}><img src={unit.url} alt={unit.testData}/></li>
+            </>
+          );
         })}
       </ul>
     </div>

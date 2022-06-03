@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { BrowserRouter, Redirect, Route, Routes } from "react-router-dom";
 import Test from "../Test/Test";
 import Nav from "../Nav/Nav";
@@ -11,11 +11,11 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-      <Nav />
+        <Nav />
         <Routes>
-        <Route exact path="/" element={<Test />}></Route>
-        <Route exact path="/about" element={<About />}></Route>
-        <Route exact path="/contact" element={<Contact />}></Route>
+          <Route exact path="/" element={<Test />}></Route>
+          <Route exact path="/about" element={<About />}></Route>
+          <Route exact path="/contact" element={<Contact />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

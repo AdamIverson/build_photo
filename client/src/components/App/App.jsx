@@ -9,6 +9,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
+      <Nav />
         <Routes>
           <Route path="/" element={ <Test /> } />
         </Routes>

@@ -1,8 +1,84 @@
-.container {
-  display: flex;
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Special Elite", cursive;
+  background-color: white;
+  justify-items: center;
+}
+
+a {
+  padding: .5rem;
+}
+
+h1 {
+  text-align: center;
+  margin: 1%;
+  font-weight: 100;
+}
+
+img {
+  /* box-shadow: 23px 23px 3px 3px rgba(0, 0, 0, 0.605),
+    -13px -13px 3px 3px rgba(128, 128, 128, 0.622); */
+  margin-left: auto;
+  margin-right: auto;
+  height: 300px;
+}
+
+img:hover {
+  transform: scale(1.05);
+  /* box-shadow: 10px 10px 3px 3px rgba(0, 0, 0, 0.605),
+    -3px -3px 3px 3px rgba(128, 128, 128, 0.622); */
 }
 
 li {
   display: inline;
-  margin: 1rem;
+  margin: .35%;
+}
+
+li:last-child {
+  flex-grow: 10;
+}
+
+.App {
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  /* background-color: rgba(255, 0, 0, 0.646); */
+  justify-content: space-around;
+}
+
+.sidenav {
+  height: 100%;
+  width: 15%;
+  position: fixed;
+  z-index: 1;
+  top: 10;
+  left: 0;
+  /* background-color: white; */
+  transition: 0.5s ease;
+  overflow-x: hidden;
+  padding-top: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-left: 3%;
+  margin-top: 8%;
+}
+
+.imageList {
+  list-style-type: none;
+}
+
+.imageComponent {
+  /* background-color: red; */
+  /* display: block; */
+  margin-left: 5%;
+  margin-right: 5%;
 }

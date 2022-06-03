@@ -24,11 +24,11 @@ function Test() {
 
   return (
     <div className="container">
-      <h1>TEST</h1>
-      <ul>
+      <h1>adam iverson photography</h1>
+      <ul className="imageList">
         {test?.map((unit) => {
           return (
-              <li key={unit.id}>
+              <li key={unit.id} className="imageComponent">
                 <img src={unit.url} alt={unit.testData} />
               </li>
           );

@@ -23,8 +23,9 @@ function Test() {
   }
 
   return (
+    <div>
+        <h1>adam iverson photography</h1>
     <div className="container">
-      <h1>adam iverson photography</h1>
       <ul className="imageList">
         {test?.map((unit) => {
           return (
@@ -34,6 +35,7 @@ function Test() {
           );
         })}
       </ul>
+    </div>
     </div>
   );
 }

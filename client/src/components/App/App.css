@@ -35,12 +35,24 @@ img {
   vertical-align: bottom;
 }
 
+img:hover {
+  object-fit: contain;
+  transform: scale(2);
+}
 li:last-child {
   flex-grow: 10;
 }
 
 .container {
   margin-left: 20%;
+  display: flex;
+}
+
+.nav-list {
+  display: inline;
+}
+.nav-list-item {
+  height: 10vh;
 }
 
 .sidenav {

@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Special Elite", cursive;
+  justify-items: center;
+}
+
+h1 {
+  text-align: center;
+  margin: 1%;
+  font-weight: 100;
+  height: 5%;
+  border: 2px double black;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+li {
+  height: 40vh;
+  flex-grow: 1;
+  list-style-type: none;
+}
+
+img {
+  max-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+li:last-child {
+  flex-grow: 10;
+}
+
+.container {
+  margin-left: 20%;
+}
+
+.sidenav {
+  height: 100%;
+  width: 20%;
+  position: fixed;
+  z-index: 1;
+  top: 10;
+  left: 0;
+  background-color: grey;
+  transition: 0.5s ease;
+  overflow-x: hidden;
+  padding-top: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding-left: 1%;
+  margin-top: 5%;
+  border: 2px dotted blue;
+}

@@ -4,8 +4,7 @@ import Test from "../Test/Test";
 import Nav from "../Nav/Nav";
 import About from "../About/About";
 import Contact from "../Contact/Contact";
-import MyDropzone from "../Uploader/Uploader";
-
+import Uploader from "../Uploader/Uploader";
 import "./App.css";
 
 function App() {
@@ -17,7 +16,7 @@ function App() {
           <Route exact path="/" element={<Test />}></Route>
           <Route exact path="/about" element={<About />}></Route>
           <Route exact path="/contact" element={<Contact />}></Route>
-          <Route exact path="/uploader" element={<MyDropzone />}></Route>
+          <Route exact path="/uploader" element={<Uploader />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

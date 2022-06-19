@@ -7,7 +7,7 @@ function Nav() {
       <li className="nav-list-item"><a href="/">home</a></li>
       <li className="nav-list-item"><a href="/about">about</a></li>
       <li className="nav-list-item"><a href="/contact">contact</a></li>
-      <li className="nav-list-item"><a href="/mydropzone">my dropzone</a></li>
+      <li className="nav-list-item"><a href="/uploader">uploader</a></li>
     </div>
   );
 }

@@ -1,11 +1,13 @@
 const express = require("express");
 const { cloudinary } = require("./utils/cloudinary");
-require('dotenv').config();
+require("dotenv").config({
+  path: './server/.env'
+});
 
 const app = express();
 
-// const testRouter = require('./routes/test.router'); 
-// app.use('/api/test', testRouter);
+const testRouter = require('./routes/test.router'); 
+app.use('/api/test', testRouter);
 
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "50mb", extended: true }));

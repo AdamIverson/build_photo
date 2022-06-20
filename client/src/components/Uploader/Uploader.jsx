@@ -47,7 +47,7 @@ function Uploader() {
           onChange={handleFileInputChange}
           value={fileInputState}
         />
-        <button type="submit">BUTTON</button>
+        <button type="submit">SUBMIT</button>
       </form>
       {previewSource && (
         <img 

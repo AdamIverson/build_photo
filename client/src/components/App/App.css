@@ -45,6 +45,18 @@ li:last-child {
   display: flex;
 }
 
+.image {
+  /* width: 10px; */
+  /* display: inline; */
+  margin: 10px;
+}
+
+.imageList {
+  display: flex;
+  margin: 10px;
+  padding: 10px;
+}
+
 .nav-list {
   display: inline;
 }

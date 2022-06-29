@@ -1,19 +1,16 @@
 const express = require("express");
+const { cloudinary } = require("../utils/cloudinary");
 const pool = require("../modules/pool");
 const router = express.Router();
 
-router.get('/', (req, res) => {
+router.get("/", async (req, res) => {
+  const {resources} = await cloudinary.search
+    .expression('folder:images')
+    .sort_by('public_id', 'desc')
+    .execute();
 
-  // res.send('res.send from test.router')
-  console.log('test.router');
-
-  pool
-  .query (`SELECT * FROM "test";`)
-  .then ((results) => res.send(results.rows))
-  .catch ((error) => {
-    console.log('ERROR SELECTING ALL FROM "test"')
-    res.sendStatus(500)
-  })
+  const publicIds = resources.map( file => file.public_id);
+  res.send(publicIds);
 });
 
 module.exports = router;

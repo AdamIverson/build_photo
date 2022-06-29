@@ -19,20 +19,6 @@ function Test() {
     }
   }
 
-  // function callAPI() {
-  //   console.log("in callAPI()");
-  //   axios({
-  //     method: "GET",
-  //     url: "/api/test",
-  //   })
-  //     .then((response) => {
-  //       setTest(response.data);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // }
-
   return (
     <div>
         <h1>adam iverson photography</h1>
@@ -44,7 +30,7 @@ function Test() {
                 key={index}
                 cloudName="aiphoto"
                 publicId={imageId}
-                width="300"
+                width="1500"
                 crop="scale"
               />
           );

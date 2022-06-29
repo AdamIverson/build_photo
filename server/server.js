@@ -22,7 +22,6 @@ app.get("/api/testFolder1000", async (req, res) => {
 
   const publicIds = resources.map( file => file.public_id);
   res.send(publicIds);
-  console.log('publicIds:', publicIds);
 });
 
 app.post("/api/upload", async (req, res) => {

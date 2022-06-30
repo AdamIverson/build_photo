@@ -7,9 +7,8 @@ const pool = require("./modules/pool");
 
 const app = express();
 
-const testRouter = require("./routes/test.router");
-
-app.use("/api/test", testRouter);
+// const templateRouter = require("./routes/template.router");
+// app.use("/api/template", templateRouter);
 
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "50mb", extended: true }));

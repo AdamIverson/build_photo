@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Redirect, Route, Routes } from "react-router-dom";
-import Test from "../Test/Test";
 import Nav from "../Nav/Nav";
+import Home from "../Home/Home";
 import About from "../About/About";
 import Contact from "../Contact/Contact";
 import Uploader from "../Uploader/Uploader";
@@ -13,7 +13,7 @@ function App() {
       <BrowserRouter>
         <Nav />
         <Routes>
-          <Route exact path="/" element={<Test />}></Route>
+          <Route exact path="/" element={<Home />}></Route>
           <Route exact path="/about" element={<About />}></Route>
           <Route exact path="/contact" element={<Contact />}></Route>
           <Route exact path="/uploader" element={<Uploader />}></Route>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Image, Transformation } from "cloudinary-react";
-function Home() {
+function Italy() {
   const [test, setTest] = useState([]);
 
   useEffect(() => {
@@ -9,7 +9,7 @@ function Home() {
 
   const callCloudinary = async () => {
     try {
-      const res = await fetch("/api/test");
+      const res = await fetch("/api/testFolder1000");
       const data = await res.json();
       setTest(data);
     } catch (error) {
@@ -19,7 +19,7 @@ function Home() {
 
   return (
     <div>
-      <h1>adam iverson photography</h1>
+      <h1>italy</h1>
       <div className="container">
         <ul className="imageList">
           {test?.map((imageId, index) => {
@@ -30,8 +30,7 @@ function Home() {
                 publicId={imageId}
                 className="image"
               >
-                <Transformation rotate="45"/>
-                <Transformation crop="scale" />
+                <Transformation crop="scale" width="500"/>
                 <Transformation radius="20"/>
                 <Transformation object-fit="contain"/>
               </Image>
@@ -43,4 +42,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Italy;

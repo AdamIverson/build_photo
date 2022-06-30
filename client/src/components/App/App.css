@@ -10,12 +10,16 @@ body {
 }
 
 h1 {
+  z-index: 5;
+  position: fixed;
+  width: 100%;
   text-align: center;
-  background-color: red;
+  color: red;
+  background-color: white;
   margin: 1%;
   font-weight: 100;
   height: 5%;
-  border: 2px double black;
+  border: 2px double red;
 }
 
 ul {
@@ -26,36 +30,42 @@ ul {
 li {
   height: 40vh;
   flex-grow: 1;
-  list-style-type: none;
-}
-
-img {
-  max-height: 100%;
-  min-width: 100%;
-  object-fit: cover;
-  vertical-align: bottom;
 }
 
 li:last-child {
   flex-grow: 10;
 }
 
+img {
+  max-height: 15%;
+  min-width: 15%;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
 .container {
+  /* margin-top: 5%; */
   margin-left: 20%;
   display: flex;
+  flex-wrap: wrap;
+  overflow-x: auto;
+  overflow-y: auto;
+  position: relative;
+  z-index: 4;
+  /* width: 100%; */
 }
 
-.image {
-  /* width: 10px; */
-  /* display: inline; */
+/* .image {
+  width: 10px;
+  display: inline;
   margin: 10px;
-}
+} */
 
-.imageList {
+/* .imageList {
   display: flex;
   margin: 10px;
   padding: 10px;
-}
+} */
 
 .nav-list {
   display: inline;
@@ -66,7 +76,7 @@ li:last-child {
 
 .sidenav {
   height: 100%;
-  width: 20%;
+  width: 10%;
   position: fixed;
   z-index: 1;
   top: 10;
@@ -78,7 +88,8 @@ li:last-child {
   display: flex;
   flex-direction: column;
   align-items: left;
-  padding-left: 1%;
+  margin-left: 2%;
+  padding-left: 2%;
   margin-top: 5%;
   border: 2px dotted blue;
 }

@@ -31,7 +31,6 @@ function Italy() {
                 className="image"
               >
                 <Transformation crop="scale" width="500"/>
-                <Transformation radius="20"/>
                 <Transformation object-fit="contain"/>
               </Image>
             );

@@ -18,28 +18,27 @@ function Home() {
   };
 
   return (
-    <div>
+    <div className="header">
       <h1>adam iverson photography</h1>
-      <div className="container">
-        <ul className="imageList">
-          {test?.map((imageId, index) => {
-            return (
-              <Image
-                key={index}
-                cloudName="aiphoto"
-                publicId={imageId}
-                className="image"
-              >
-                <Transformation rotate="45"/>
-                <Transformation crop="scale" />
-                <Transformation radius="20"/>
-                <Transformation object-fit="contain"/>
-              </Image>
-            );
-          })}
-        </ul>
+        <div className="container">
+          <ul className="imageList">
+            {test?.map((imageId, index) => {
+              return (
+                <Image
+                  key={index}
+                  cloudName="aiphoto"
+                  publicId={imageId}
+                  className="image"
+                >
+                  <Transformation rotate="45" />
+                  <Transformation crop="scale" />
+                  <Transformation object-fit="contain" />
+                </Image>
+              );
+            })}
+          </ul>
+        </div>
       </div>
-    </div>
   );
 }
 

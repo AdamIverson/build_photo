@@ -9,7 +9,7 @@ function Home() {
 
   const callCloudinary = async () => {
     try {
-      const res = await fetch("/api/test");
+      const res = await fetch("/api/google");
       const data = await res.json();
       setTest(data);
     } catch (error) {
@@ -18,20 +18,18 @@ function Home() {
   };
 
   return (
-    <div className="header">
+    <div>
       <h1>adam iverson photography</h1>
         <div className="container">
-          <ul className="imageList">
+          <ul>
             {test?.map((imageId, index) => {
               return (
                 <Image
                   key={index}
                   cloudName="aiphoto"
                   publicId={imageId}
-                  className="image"
                 >
-                  <Transformation rotate="45" />
-                  <Transformation crop="scale" />
+                  <Transformation crop="scale"/>
                   <Transformation object-fit="contain" />
                 </Image>
               );

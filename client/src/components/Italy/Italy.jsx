@@ -21,14 +21,13 @@ function Italy() {
     <div>
       <h1>italy</h1>
       <div className="container">
-        <ul className="imageList">
+        <ul>
           {test?.map((imageId, index) => {
             return (
               <Image
                 key={index}
                 cloudName="aiphoto"
                 publicId={imageId}
-                className="image"
               >
                 <Transformation crop="scale" width="500"/>
                 <Transformation object-fit="contain"/>

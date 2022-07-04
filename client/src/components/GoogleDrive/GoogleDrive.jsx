@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Image, Transformation } from "cloudinary-react";
-function Test() {
+function Google() {
   const [test, setTest] = useState([]);
 
   useEffect(() => {
@@ -9,7 +9,7 @@ function Test() {
 
   const callCloudinary = async () => {
     try {
-      const res = await fetch("/api/test");
+      const res = await fetch("/api/google");
       const data = await res.json();
       setTest(data);
     } catch (error) {
@@ -19,15 +19,16 @@ function Test() {
 
   return (
     <div>
-      <h1>adam iverson photography</h1>
+      <h1>google</h1>
       <div className="container">
-        <ul>
+        <ul className="imageList">
           {test?.map((imageId, index) => {
             return (
               <Image
                 key={index}
                 cloudName="aiphoto"
                 publicId={imageId}
+                className="image"
               >
                 <Transformation crop="scale" width="500"/>
                 <Transformation object-fit="contain"/>
@@ -40,4 +41,4 @@ function Test() {
   );
 }
 
-export default Test;
+export default Google;

@@ -10,6 +10,9 @@ const app = express();
 const templateRouter = require("./routes/template.router");
 app.use("/api/template", templateRouter);
 
+const googleRouter = require("./routes/google.router");
+app.use("/api/google", googleRouter);
+
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
 
@@ -22,6 +25,16 @@ app.get("/api/testFolder1000", async (req, res) => {
   const publicIds = resources.map( file => file.public_id);
   res.send(publicIds);
 });
+
+// app.get("/api/google", async (req, res) => {
+//   const {resources} = await cloudinary.search
+//     .expression('folder:Cooper')
+//     .sort_by('public_id', 'desc')
+//     .execute();
+
+//   const publicIds = resources.map( file => file.public_id);
+//   res.send(publicIds);
+// })
 
 app.post("/api/upload", async (req, res) => {
   try {

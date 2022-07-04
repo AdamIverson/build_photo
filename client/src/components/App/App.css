@@ -41,37 +41,19 @@ img {
   margin: 1%;
   max-height: 15%;
   min-width: 15%;
+  z-index: 4;
   object-fit: cover;
-  vertical-align: bottom;
+  vertical-align: top;
 }
 
 .container {
   margin-top: 5%;
-  margin-left: 20%;
+  margin-left: 17%;
   display: flex;
   flex-wrap: wrap;
-  overflow-x: auto;
-  overflow-y: auto;
   position: relative;
   z-index: 4;
-  /* width: 100%; */
 }
-
-.header {
-
-}
-
-/* .image {
-  width: 10px;
-  display: inline;
-  margin: 10px;
-} */
-
-/* .imageList {
-  display: flex;
-  margin: 10px;
-  padding: 10px;
-} */
 
 .nav-list {
   display: inline;
@@ -84,10 +66,10 @@ img {
   height: 100%;
   width: 10%;
   position: fixed;
-  z-index: 1;
+  z-index: 7;
   top: 10;
   left: 0;
-  background-color: grey;
+  /* background-color: grey; */
   transition: 0.5s ease;
   overflow-x: hidden;
   padding-top: 1%;

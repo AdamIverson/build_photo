@@ -9,7 +9,7 @@ function Home() {
 
   const callCloudinary = async () => {
     try {
-      const res = await fetch("/api/google");
+      const res = await fetch("/api/testFolder1000");
       const data = await res.json();
       setTest(data);
     } catch (error) {
@@ -29,7 +29,7 @@ function Home() {
                   cloudName="aiphoto"
                   publicId={imageId}
                 >
-                  <Transformation crop="scale"/>
+                  <Transformation crop="scale" width="400"/>
                   <Transformation object-fit="contain" />
                 </Image>
               );

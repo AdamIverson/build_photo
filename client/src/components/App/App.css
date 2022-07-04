@@ -16,7 +16,6 @@ h1 {
   width: 100%;
   text-align: center;
   color: red;
-  /* background-color: white; */
   margin: 1%;
   font-weight: 100;
   height: 5%;
@@ -38,19 +37,19 @@ li:last-child {
 }
 
 img {
-  margin: 1%;
+  margin: .25%;
   max-height: 15%;
   min-width: 15%;
   z-index: 4;
   object-fit: cover;
-  vertical-align: top;
+  vertical-align: bottom;
 }
 
 .container {
   margin-top: 5%;
   margin-left: 17%;
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
   position: relative;
   z-index: 4;
 }

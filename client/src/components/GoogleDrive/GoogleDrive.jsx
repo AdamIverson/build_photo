@@ -21,7 +21,7 @@ function Google() {
     <div>
       <h1>google</h1>
       <div className="container">
-        <ul className="imageList">
+        <ul>
           {test?.map((imageId, index) => {
             return (
               <Image

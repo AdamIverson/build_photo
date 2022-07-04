@@ -29,7 +29,7 @@ function Italy() {
                 cloudName="aiphoto"
                 publicId={imageId}
               >
-                <Transformation crop="scale" width="500"/>
+                <Transformation crop="scale" width="400"/>
                 <Transformation object-fit="contain"/>
               </Image>
             );

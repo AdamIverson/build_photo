@@ -26,16 +26,6 @@ app.get("/api/testFolder1000", async (req, res) => {
   res.send(publicIds);
 });
 
-// app.get("/api/google", async (req, res) => {
-//   const {resources} = await cloudinary.search
-//     .expression('folder:Cooper')
-//     .sort_by('public_id', 'desc')
-//     .execute();
-
-//   const publicIds = resources.map( file => file.public_id);
-//   res.send(publicIds);
-// })
-
 app.post("/api/upload", async (req, res) => {
   try {
     const fileStr = req.body.data;

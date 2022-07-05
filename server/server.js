@@ -18,7 +18,7 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 
 app.get("/api/testFolder1000", async (req, res) => {
   const {resources} = await cloudinary.search
-    .expression('folder:testFolder1000')
+    .expression('folder:Trampnation')
     .sort_by('public_id', 'desc')
     .execute();
 

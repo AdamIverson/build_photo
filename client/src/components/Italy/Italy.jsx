@@ -24,14 +24,13 @@ function Italy() {
         <ul>
           {test?.map((imageId, index) => {
             return (
-              <Image
-                key={index}
-                cloudName="aiphoto"
-                publicId={imageId}
-              >
-                <Transformation crop="scale" width="400"/>
-                <Transformation object-fit="contain"/>
-              </Image>
+              <li>
+                <Image
+                  key={index}
+                  cloudName="aiphoto"
+                  publicId={imageId}
+                ></Image>
+              </li>
             );
           })}
         </ul>

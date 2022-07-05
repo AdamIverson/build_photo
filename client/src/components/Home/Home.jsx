@@ -20,23 +20,19 @@ function Home() {
   return (
     <div>
       <h1>adam iverson photography</h1>
-        <div className="container">
-          <ul>
-            {test?.map((imageId, index) => {
-              return (
-                <Image
-                  key={index}
-                  cloudName="aiphoto"
-                  publicId={imageId}
-                >
-                  <Transformation crop="scale" width="400"/>
-                  <Transformation object-fit="contain" />
+      <div className="container">
+        <ul>
+          {test?.map((imageId, index) => {
+            return (
+              <li>
+                <Image key={index} cloudName="aiphoto" publicId={imageId}>
                 </Image>
-              );
-            })}
-          </ul>
-        </div>
+              </li>
+            );
+          })}
+        </ul>
       </div>
+    </div>
   );
 }
 

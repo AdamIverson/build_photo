@@ -24,7 +24,7 @@ function Italy() {
         <ul>
           {test?.map((imageId, index) => {
             return (
-              <li>
+              <li className="gallery-image">
                 <Image
                   key={index}
                   cloudName="aiphoto"

@@ -42,6 +42,7 @@ img {
   min-width: 100%;
   object-fit: cover;
   vertical-align: bottom;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .container {
@@ -79,7 +80,7 @@ img {
   left: 0;
   /* background-color: grey; */
   transition: 0.5s ease;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   padding-top: 1%;
   display: flex;
   flex-direction: column;

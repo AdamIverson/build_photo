@@ -15,46 +15,41 @@ function Uploader() {
     reader.readAsDataURL(file);
     reader.onloadend = () => {
       setPreviewSource(reader.result);
-    }
-  }
+    };
+  };
 
   const uploadImage = async (jazz) => {
-     try {
-      await fetch('/api/upload', {
-        method: 'POST',
-        body: JSON.stringify({data: jazz}),
-        headers: {'Content-type': 'application/json'}
-      }
-      )
-     } catch (error) {
+    try {
+      await fetch("/api/upload", {
+        method: "POST",
+        body: JSON.stringify({ data: jazz }),
+        headers: { "Content-type": "application/json" },
+      });
+    } catch (error) {
       console.error(error);
-
-     }
-  }
+    }
+  };
 
   const handleSubmitFile = (e) => {
     e.preventDefault();
-    if(!previewSource) return;
+    if (!previewSource) return;
     uploadImage(previewSource);
-  }
+  };
   return (
     <div>
       <h1>uploader</h1>
-      <form onSubmit={handleSubmitFile}>
-        <input
-          type="file"
-          name="image"
-          onChange={handleFileInputChange}
-          value={fileInputState}
-        />
-        <button type="submit">SUBMIT</button>
-      </form>
-      {previewSource && (
-        <img 
-        src={previewSource}
-        alt="chosen"
-        />
-      )}
+      <div className="container">
+        <form onSubmit={handleSubmitFile}>
+          <input
+            type="file"
+            name="image"
+            onChange={handleFileInputChange}
+            value={fileInputState}
+          />
+          <button type="submit">SUBMIT</button>
+        </form>
+        {previewSource && <img src={previewSource} alt="chosen" />}
+      </div>
     </div>
   );
 }

@@ -24,15 +24,12 @@ function Google() {
         <ul>
           {test?.map((imageId, index) => {
             return (
-              <li>
+              <li className="gallery-image">
                 <Image
                   key={index}
                   cloudName="aiphoto"
                   publicId={imageId}
-                  className="image"
                 >
-                  <Transformation crop="scale" width="500" />
-                  <Transformation object-fit="contain" />
                 </Image>
               </li>
             );

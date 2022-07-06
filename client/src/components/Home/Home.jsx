@@ -21,10 +21,10 @@ function Home() {
     <div>
       <h1>adam iverson photography</h1>
       <div className="container">
-        <ul>
+        <ul className="picture-list">
           {test?.map((imageId, index) => {
             return (
-              <li>
+              <li className="gallery-image">
                 <Image key={index} cloudName="aiphoto" publicId={imageId}>
                 </Image>
               </li>

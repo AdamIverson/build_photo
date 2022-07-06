@@ -19,19 +19,18 @@ function Test() {
 
   return (
     <div>
-      <h1>adam iverson photography</h1>
+      <h1>template</h1>
       <div className="container">
         <ul>
           {test?.map((imageId, index) => {
             return (
-              <Image
-                key={index}
-                cloudName="aiphoto"
-                publicId={imageId}
-              >
-                <Transformation crop="scale" width="500"/>
-                <Transformation object-fit="contain"/>
-              </Image>
+              <li className="gallery-image">
+                <Image
+                  key={index}
+                  cloudName="aiphoto"
+                  publicId={imageId}
+                ></Image>
+              </li>
             );
           })}
         </ul>

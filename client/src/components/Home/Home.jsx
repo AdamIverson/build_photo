@@ -24,7 +24,7 @@ function Home() {
         <ul className="picture-list">
           {test?.map((imageId, index) => {
             return (
-              <li className="gallery-image">
+              <li className="gallery-image" key={index}>
                 <Image key={index} cloudName="aiphoto" publicId={imageId}>
                 </Image>
               </li>

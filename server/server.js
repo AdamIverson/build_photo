@@ -21,6 +21,9 @@ app.use("/api/google", googleRouter);
 const contactRouter = require("./routes/contact.router");
 app.use("/api/contact_form", contactRouter);
 
+const italyRouter = require("./routes/italy.router");
+app.use("/api/italy", italyRouter);
+
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
 

@@ -9,7 +9,7 @@ function Italy() {
 
   const callCloudinary = async () => {
     try {
-      const res = await fetch("/api/testFolder1000");
+      const res = await fetch("/api/italy");
       const data = await res.json();
       setTest(data);
     } catch (error) {

@@ -52,6 +52,10 @@ img {
             -2px -7px 20px 17px rgb(223, 222, 222);
 }
 
+.contactForm {
+  flex-direction: column;
+}
+
 .container {
   margin-top: 5%;
   margin-left: 10%;

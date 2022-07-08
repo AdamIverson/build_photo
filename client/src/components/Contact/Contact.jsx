@@ -24,9 +24,9 @@ export default function Contact() {
   return (
     <div>
       <h1>Contact</h1>
-      <div className="form-container">
+      <div className="contact-container">
         <form onSubmit={(e) => sendMessage(e)}>
-          <ul>
+          <ul className="contactForm">
             <li key="1">
               <label htmlFor="email">enter email address: </label>
               <input

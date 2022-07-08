@@ -16,7 +16,7 @@ function App() {
         <Nav />
         <Routes>
           <Route exact path="/" element={<Home />}></Route>
-          <Route exact path="/google" element={<Google  />}></Route>
+          <Route exact path="/google" element={<Google />}></Route>
           <Route exact path="/about" element={<About />}></Route>
           <Route exact path="/contact" element={<Contact />}></Route>
           <Route exact path="/italy" element={<Italy />}></Route>

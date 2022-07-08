@@ -24,12 +24,8 @@ function Test() {
         <ul>
           {test?.map((imageId, index) => {
             return (
-              <li className="gallery-image">
-                <Image
-                  key={index}
-                  cloudName="aiphoto"
-                  publicId={imageId}
-                ></Image>
+              <li key={index} className="gallery-image">
+                <Image cloudName="aiphoto" publicId={imageId}></Image>
               </li>
             );
           })}

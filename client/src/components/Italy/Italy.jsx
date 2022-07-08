@@ -25,11 +25,7 @@ function Italy() {
           {test?.map((imageId, index) => {
             return (
               <li key={index} className="gallery-image">
-                <Image
-                  key={index}
-                  cloudName="aiphoto"
-                  publicId={imageId}
-                ></Image>
+                <Image cloudName="aiphoto" publicId={imageId}></Image>
               </li>
             );
           })}

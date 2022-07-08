@@ -25,8 +25,7 @@ function Home() {
           {test?.map((imageId, index) => {
             return (
               <li className="gallery-image" key={index}>
-                <Image key={index} cloudName="aiphoto" publicId={imageId}>
-                </Image>
+                <Image cloudName="aiphoto" publicId={imageId}></Image>
               </li>
             );
           })}

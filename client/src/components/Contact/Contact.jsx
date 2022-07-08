@@ -5,17 +5,6 @@ export default function Contact() {
   const [from, setFrom] = useState("");
   const [message, setMessage] = useState("");
 
-  // const uploadMessage = (e) => {
-  // const data = { from: email, message: msg };
-  // axios.post("/api/contact_form", data)
-  // .then(response => {
-  //   console.log("Status: ", response.status);
-  //   console.log("Data: ", response.data);
-  // }).catch(error => {
-  //   console.error('Something went wrong!', error);
-  // });
-  // };
-
   const sendMessage = async (e) => {
     console.log("from:", from);
     console.log("message:", message);

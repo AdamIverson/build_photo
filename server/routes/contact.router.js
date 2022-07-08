@@ -7,7 +7,6 @@ const router = express.Router();
 // })
 
 router.post("/", async (req, res) => {
-  console.log("contact_form req.body:", req.body);
   const query = `
   INSERT INTO "contact_form" ("from", "message")
   VALUES ($1, $2)

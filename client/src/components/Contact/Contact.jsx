@@ -21,16 +21,15 @@ export default function Contact() {
     console.log("message:", message);
     e.preventDefault();
 
-    const submission = {from: from, message: message};
-      console.log("submission:", submission);
-    const response = await axios.post("/api/contact_form", {
-      method: "POST",
-      // headers: { "Content-Type": "application/json" },
-      data: submission,
-    })
-    .then(
-      console.log("dot then!")
-    );
+    axios
+      .post("/api/contact_form", {
+        method: "POST",
+        data: { from: from, message: message },
+      })
+      .then(console.log("dot then!"))
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
@@ -50,7 +49,7 @@ export default function Contact() {
               ></input>
             </li>
             <li key="2">
-              <label htmlFor="message">enter message</label>
+              <label htmlFor="message">enter message:</label>
               <textarea
                 id="message"
                 name="message"

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Image, Transformation } from "cloudinary-react";
+import { Image } from "cloudinary-react";
 function Italy() {
   const [test, setTest] = useState([]);
 

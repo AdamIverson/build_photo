@@ -26,8 +26,6 @@ export default function Contact() {
       <h1>Contact</h1>
       <div className="contact-container">
         <form onSubmit={(e) => sendMessage(e)}>
-          <ul className="contactForm">
-            <li key="1">
               <label htmlFor="email">enter email address: </label>
               <input
                 type="email"
@@ -36,8 +34,6 @@ export default function Contact() {
                 value={from}
                 onChange={(e) => setFrom(e.target.value)}
               ></input>
-            </li>
-            <li key="2">
               <label htmlFor="message">enter message:</label>
               <textarea
                 id="message"
@@ -45,11 +41,7 @@ export default function Contact() {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               ></textarea>
-            </li>
-            <li key="3">
               <button type="submit">SUBMIT BUTTON</button>
-            </li>
-          </ul>
         </form>
       </div>
     </div>

@@ -9,8 +9,8 @@ const pool = require("./modules/pool");
 const app = express();
 
 // Body parser middleware
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json({limit: '50mb'}));
+app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 
 const templateRouter = require("./routes/template.router");
 app.use("/api/template", templateRouter);
@@ -45,7 +45,7 @@ app.post("/api/upload", async (req, res) => {
   try {
     const fileStr = req.body.data;
     const uploadedResponse = await cloudinary.uploader.upload(fileStr, {
-      upload_preset: "testFolder1000",
+      upload_preset: "uploads",
     });
     const queryText = `
         INSERT INTO "images" ("title", "cloudinary_id", "image_url")

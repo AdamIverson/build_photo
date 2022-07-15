@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { InlineWidget } from "react-calendly";
 import axios from "axios";
 
 export default function Contact() {
@@ -22,7 +23,7 @@ export default function Contact() {
   };
 
   return (
-    <div>
+    <div className="contactPage">
       <h1>Contact</h1>
       <div className="contact-container">
         <form onSubmit={(e) => sendMessage(e)}>
@@ -43,6 +44,9 @@ export default function Contact() {
               ></textarea>
               <button type="submit">SUBMIT BUTTON</button>
         </form>
+      </div>
+      <div className="calendly">
+        <InlineWidget url="https://calendly.com/adamciverson"/>
       </div>
     </div>
   );

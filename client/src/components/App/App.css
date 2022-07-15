@@ -52,8 +52,20 @@ img {
             -2px -7px 20px 17px rgb(223, 222, 222);
 }
 
+.calendly {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+}
+
 .contactForm {
   flex-direction: column;
+}
+
+.contactPage {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .container {

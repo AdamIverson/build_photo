@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 function Uploader() {
   const [fileInputState, setFileInputState] = useState("");
   const [previewSource, setPreviewSource] = useState("");
+  const [altText, setAltText] = useState("");
 
   const handleFileInputChange = (e) => {
     const file = e.target.files[0];
@@ -18,15 +20,27 @@ function Uploader() {
   };
 
   const uploadImage = async (jazz) => {
-    try {
-      await fetch("/api/upload", {
+
+    await axios
+      .post("/api/upload", {
         method: "POST",
-        body: JSON.stringify({ data: jazz }),
-        headers: { "Content-type": "application/json" },
+        data: jazz,
+      })
+      .then(console.log("axios.post upload"))
+      .catch((error) => {
+        console.log(error);
       });
-    } catch (error) {
-      console.error(error);
-    }
+
+
+    // try {
+    //   await fetch("/api/upload", {
+    //     method: "POST",
+    //     body: JSON.stringify({ data: jazz }),
+    //     headers: { "Content-type": "application/json" },
+    //   });
+    // } catch (error) {
+    //   console.error(error);
+    // }
   };
 
   const handleSubmitFile = (e) => {
@@ -34,18 +48,37 @@ function Uploader() {
     if (!previewSource) return;
     uploadImage(previewSource);
   };
+
+  const handleAltTextChange = (e) => {
+    // console.log("e.target.value:", e.target.value);
+    setAltText(e.target.value);
+  };
+
   return (
     <div>
       <h1>uploader</h1>
       <div className="container">
         <form onSubmit={handleSubmitFile}>
-          <input
-            type="file"
-            name="image"
-            onChange={handleFileInputChange}
-            value={fileInputState}
-          />
-          <button type="submit">SUBMIT</button>
+          <ul>
+            <li>
+              <input
+                type="file"
+                name="image"
+                onChange={handleFileInputChange}
+                value={fileInputState}
+              />
+            </li>
+            <li>
+              <label htmlFor="altText">enter alt text</label>
+              <input
+                type="textarea"
+                name="altText"
+                value={altText}
+                onChange={handleAltTextChange}
+              />
+            </li>
+            <button type="submit">SUBMIT</button>
+          </ul>
         </form>
         {previewSource && <img src={previewSource} alt="chosen" />}
       </div>

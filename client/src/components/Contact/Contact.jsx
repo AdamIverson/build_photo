@@ -6,7 +6,7 @@ export default function Contact() {
   const [from, setFrom] = useState("");
   const [message, setMessage] = useState("");
 
-  const sendMessage = async (e) => {
+  const sendMessage = (e) => {
     console.log("from:", from);
     console.log("message:", message);
     e.preventDefault();

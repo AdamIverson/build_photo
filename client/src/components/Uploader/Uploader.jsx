@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 function Uploader() {
   const [fileInputState, setFileInputState] = useState("");
-  // const [selectedFile, setSelectedFile] = useState("");
   const [previewSource, setPreviewSource] = useState("");
 
   const handleFileInputChange = (e) => {

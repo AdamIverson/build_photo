@@ -5,6 +5,7 @@ function Uploader() {
   const [fileInputState, setFileInputState] = useState("");
   const [previewSource, setPreviewSource] = useState("");
   const [altText, setAltText] = useState("");
+  const [poem, setPoem] = useState("");
 
   const handleFileInputChange = (e) => {
     const file = e.target.files[0];
@@ -20,12 +21,13 @@ function Uploader() {
   };
 
   const uploadImage = async (jazz) => {
-console.log(altText);
+    console.log(altText);
     await axios
       .post("/api/upload", {
         method: "POST",
         data: jazz,
-        altText: altText
+        altText: altText,
+        poem: poem
       })
       .then(console.log("axios.post upload"))
       .catch((error) => {
@@ -40,9 +42,12 @@ console.log(altText);
   };
 
   const handleAltTextChange = (e) => {
-    // console.log("e.target.value:", e.target.value);
     setAltText(e.target.value);
   };
+
+  const handlePoemChange = (e) => {
+    setPoem(e.target.value);
+  }
 
   return (
     <div>
@@ -65,6 +70,14 @@ console.log(altText);
                 name="altText"
                 value={altText}
                 onChange={handleAltTextChange}
+              />
+            </li>
+            <li>
+              <label htmlFor="poem">poem</label>
+              <input type="textarea"
+              name="poem"
+              value={poem}
+              onChange={handlePoemChange}
               />
             </li>
             <button type="submit">SUBMIT</button>

@@ -10,15 +10,17 @@ router.post("/", async (req, res) => {
       upload_preset: "uploads",
     });
     const queryText = `
-        INSERT INTO "images" ("title", "cloudinary_id", "image_url", "altText")
-        VALUES ($1, $2, $3, $4)
+        INSERT INTO "images" ("title", "cloudinary_id", "image_url", "altText", "poem")
+        VALUES ($1, $2, $3, $4, $5)
       `;
     const queryValues = [
       uploadedResponse.asset_id,
       uploadedResponse.public_id,
       uploadedResponse.url,
-      req.body.altText
+      req.body.altText,
+      req.body.poem
     ];
+    console.log("req.body.poem:", req.body.poem);
     await pool
       .query(queryText, queryValues)
       .then(() => res.sendStatus(201))

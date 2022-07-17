@@ -1,5 +1,5 @@
 [build]
-  publish = "static/"
+  publish = "/opt/build/repo/static"
   command = "echo 'default context'"
 
 [functions]

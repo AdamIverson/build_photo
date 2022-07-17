@@ -27,22 +27,30 @@ export default function Contact() {
       <h1>Contact</h1>
       <div className="container contact-container">
         <form onSubmit={(e) => sendMessage(e)}>
-          <label htmlFor="email">enter email address: </label>
-          <input
-            type="email"
-            id="email"
-            name="from"
-            value={from}
-            onChange={(e) => setFrom(e.target.value)}
-          ></input>
-          <label htmlFor="message">enter message:</label>
-          <textarea
-            id="message"
-            name="message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-          ></textarea>
-          <button type="submit">SUBMIT BUTTON</button>
+          <ul>
+            <li>
+              <label htmlFor="email">enter email address: </label>
+              <input
+                type="email"
+                id="email"
+                name="from"
+                value={from}
+                onChange={(e) => setFrom(e.target.value)}
+              ></input>
+            </li>
+            <li>
+              <label htmlFor="message">enter message:</label>
+              <textarea
+                id="message"
+                name="message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+              ></textarea>
+            </li>
+            <li>
+              <button type="submit">SUBMIT BUTTON</button>
+            </li>
+          </ul>
         </form>
       </div>
       <h2>OR</h2>

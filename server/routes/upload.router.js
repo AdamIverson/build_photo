@@ -20,7 +20,6 @@ router.post("/", async (req, res) => {
       req.body.altText,
       req.body.poem
     ];
-    console.log("req.body.poem:", req.body.poem);
     await pool
       .query(queryText, queryValues)
       .then(() => res.sendStatus(201))

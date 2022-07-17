@@ -1,5 +1,5 @@
 [build]
-  publish = "/client/build/static"
+  publish = "/client/build/public/index.html"
   command = "echo 'default context'"
 
 [functions]

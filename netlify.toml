@@ -1,6 +1,0 @@
-[build]
-  publish = "/client/build/public"
-  command = "echo 'default context'"
-
-[functions]
-  directory = "functions"

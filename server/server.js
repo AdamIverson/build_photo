@@ -27,6 +27,9 @@ app.use("/api/italy", italyRouter);
 const uploadRouter = require("./routes/upload.router");
 app.use("/api/upload", uploadRouter);
 
+const fileDetailRouter = require("./routes/fileDetail.router");
+app.use("/api/fileDetail", fileDetailRouter);
+
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
 

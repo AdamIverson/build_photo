@@ -10,19 +10,20 @@ router.post("/", async (req, res) => {
       upload_preset: "uploads",
     });
     const queryText = `
-        INSERT INTO "images" ("title", "cloudinary_id", "image_url")
-        VALUES ($1, $2, $3)
+        INSERT INTO "images" ("title", "cloudinary_id", "image_url", "altText")
+        VALUES ($1, $2, $3, $4)
       `;
     const queryValues = [
       uploadedResponse.asset_id,
       uploadedResponse.public_id,
       uploadedResponse.url,
+      req.body.altText
     ];
     await pool
       .query(queryText, queryValues)
       .then(() => res.sendStatus(201))
       .catch((error) => {
-        console.log("error POST fav", error);
+        console.log("error POST upload", error);
         res.sendStatus(500);
       });
   } catch (error) {

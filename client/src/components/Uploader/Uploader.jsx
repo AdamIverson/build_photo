@@ -20,27 +20,17 @@ function Uploader() {
   };
 
   const uploadImage = async (jazz) => {
-
+console.log(altText);
     await axios
       .post("/api/upload", {
         method: "POST",
         data: jazz,
+        altText: altText
       })
       .then(console.log("axios.post upload"))
       .catch((error) => {
         console.log(error);
       });
-
-
-    // try {
-    //   await fetch("/api/upload", {
-    //     method: "POST",
-    //     body: JSON.stringify({ data: jazz }),
-    //     headers: { "Content-type": "application/json" },
-    //   });
-    // } catch (error) {
-    //   console.error(error);
-    // }
   };
 
   const handleSubmitFile = (e) => {

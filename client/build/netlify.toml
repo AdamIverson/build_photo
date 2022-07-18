@@ -1,7 +1,6 @@
 [build]
-  publish = "static/"
+  publish = "build/"
   command = "react-scripts build"
-  build = "build"
 
 [functions]
   directory = "functions"

@@ -1,6 +1,6 @@
 [build]
   publish = "build/"
-  command = "react-scripts build"
+  command = "echo 'default context'"
 
 [functions]
   directory = "functions"

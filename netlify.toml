@@ -1,6 +1,7 @@
 [build]
   publish = "build"
-  command = "echo 'default context'"
+  command = "npm run build"
+  base = "/"
 
 [functions]
   directory = "functions"

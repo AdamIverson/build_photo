@@ -1,0 +1,13 @@
+[build]
+  command = "CI = npm run build"
+  build = "/build"
+  base = "/"
+
+[functions]
+  directory = "functions"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false

@@ -41,10 +41,16 @@ app.get("/api/testFolder1000", async (req, res) => {
 });
 
 // Serve static files
-app.use(express.static("build"));
+// app.use(express.static("build"));
 
-const PORT = process.env.PORT || 3001;
+// const PORT = process.env.PORT || 3001;
 
-app.listen(PORT, () => {
-  console.log(`Server listening on ${PORT}`);
+
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
+
+app.listen(port, () => {
+  console.log(`Server listening on ${port}`);
 });

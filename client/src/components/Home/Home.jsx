@@ -19,7 +19,7 @@ function Home() {
 
   return (
     <div>
-      <h1>adam c iverson photography</h1>
+      <h1>adam iverson photography</h1>
       <div className="container">
         <ul className="picture-list">
           {test?.map((imageId, index) => {

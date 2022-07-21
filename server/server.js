@@ -34,15 +34,15 @@ app.use("/api/upload", uploadRouter);
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
 
-app.get("/api/testFolder1000", async (req, res) => {
-  const {resources} = await cloudinary.search
-    .expression('folder:MAYDAY2017')
-    .sort_by('public_id', 'desc')
-    .execute();
+// app.get("/api/testFolder1000", async (req, res) => {
+//   const {resources} = await cloudinary.search
+//     .expression('folder:MAYDAY2017')
+//     .sort_by('public_id', 'desc')
+//     .execute();
 
-  const publicIds = resources.map( file => file.public_id);
-  res.send(publicIds);
-});
+//   const publicIds = resources.map( file => file.public_id);
+//   res.send(publicIds);
+// });
 
 // Serve static files
 // app.use(express.static("build"));

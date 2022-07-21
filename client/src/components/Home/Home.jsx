@@ -15,7 +15,7 @@ function Home() {
 
   const callCloudinary = async () => {
     try {
-      const res = await fetch(`${process.env.CLOUDINARY_URL}/api/testFolder1000`);
+      const res = await fetch(`${cloudAPI}/api/testFolder1000`);
       const data = await res.json();
       setTest(data);
     } catch (error) {

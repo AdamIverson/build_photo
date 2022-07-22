@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Image } from "cloudinary-react";
-require("dotenv").config({
-  path: "../../../server/.env",
-});
+// require("dotenv").config({
+//   path: "../../../server/.env",
+// });
 
 function Home() {
   const [test, setTest] = useState([]);
 
-  const cloudAPI = process.env.CLOUDINARY_URL
+  // const cloudAPI = process.env.CLOUDINARY_URL
 
   useEffect(() => {
     callCloudinary();
@@ -15,7 +15,7 @@ function Home() {
 
   const callCloudinary = async () => {
     try {
-      const res = await fetch(`${cloudAPI}/api/testFolder1000`);
+      const res = await fetch(`/api/testFolder1000`);
       const data = await res.json();
       setTest(data);
     } catch (error) {

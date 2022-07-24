@@ -52,7 +52,7 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 
 let port = process.env.PORT;
 if (port == null || port == "") {
-  port = 8000;
+  port = 80;
 }
 else if (port === "production") {
   app.use(express.static("client/build"));

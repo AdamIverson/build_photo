@@ -53,7 +53,7 @@ app.get(`${cloudURL}/api/testFolder1000`, async (req, res) => {
 
 let port = process.env.PORT;
 if (port == null || port == "") {
-  port = 80;
+  port = 3001;
 }
 else if (port === "production") {
   app.use(express.static("client/build"));

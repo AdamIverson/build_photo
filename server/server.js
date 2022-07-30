@@ -21,7 +21,7 @@ const templateRouter = require("./routes/template.router");
 app.use("/api/template", templateRouter);
 
 const googleRouter = require("./routes/google.router");
-app.use(`${cloudURL}/api/google`, googleRouter);
+app.use(`/api/google`, googleRouter);
 
 const contactRouter = require("./routes/contact.router");
 app.use("/api/contact_form", contactRouter);
@@ -48,17 +48,17 @@ app.get(`/api/testFolder1000`, async (req, res) => {
 // Serve static files
 // app.use(express.static("build"));
 
-// const PORT = process.env.PORT || 3001;
+// const port = process.env.PORT || 3001;
 
 
 let port = process.env.PORT;
 if (port == null || port == "") {
-  port = 3001;
+  port = 80;
 }
 else if (port === "production") {
   app.use(express.static("client/build"));
 };
-// app.use(routes);
+app.use(routes);
 
 
 app.listen(port, () => {

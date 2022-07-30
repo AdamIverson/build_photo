@@ -58,7 +58,7 @@ if (port == null || port == "") {
 else if (port === "production") {
   app.use(express.static("client/build"));
 };
-app.use(routes);
+// app.use(routes);
 
 
 app.listen(port, () => {

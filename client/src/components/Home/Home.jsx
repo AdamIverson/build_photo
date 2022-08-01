@@ -15,7 +15,7 @@ function Home() {
 
   const callCloudinary = async () => {
     try {
-      const res = await fetch(`/api/testFolder1000`);
+      const res = await fetch(`https://cloudinary.com/console/c-ea7d281b226439d7c9800ba90d49e4/media_library/folders/c0ae9bd60889748008ea1cc20ea5604043`);
       const data = await res.json();
       setTest(data);
     } catch (error) {

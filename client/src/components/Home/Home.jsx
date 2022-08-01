@@ -17,7 +17,7 @@ function Home() {
     
     cloudinary.v2.api.resources({
       type: 'upload',
-      prefix: 'MAYDAY2017' // add your folder
+      prefix: 'testFolder1000' // add your folder
     },
       function(error, result) { console.log(result, error) });
 

@@ -15,19 +15,19 @@ function Home() {
 
   const callCloudinary = async () => {
     
-    cloudinary.v2.api.resources({
-      type: 'upload',
-      prefix: 'testFolder1000' // add your folder
-    },
-      function(error, result) { console.log(result, error) });
+    // cloudinary.v2.api.resources({
+    //   type: 'upload',
+    //   prefix: 'testFolder1000' // add your folder
+    // },
+    //   function(error, result) { console.log(result, error) });
 
-    // try {
-    //   const res = await fetch(`/api/testFolder1000`);
-    //   const data = await res.json();
-    //   setTest(data);
-    // } catch (error) {
-    //   console.error(error);
-    // }
+    try {
+      const res = await fetch(`/api/testFolder1000`);
+      const data = await res.json();
+      setTest(data);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (

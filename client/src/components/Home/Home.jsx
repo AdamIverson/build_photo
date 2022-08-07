@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Image } from "cloudinary-react";
+import axios from "axios";
 require("dotenv").config({
   path: "../../../server/.env",
 });
@@ -22,8 +23,9 @@ function Home() {
     //   function(error, result) { console.log(result, error) });
 
     try {
-      const res = await fetch(`/api/testFolder1000`);
-      const data = await Response.json();
+      // const res = await fetch(`/api/testFolder1000`);
+      const res = await axios.get('/api/testFolder1000')
+      const data = await res.json();
       setTest(data);
     } catch (error) {
       console.error(error);

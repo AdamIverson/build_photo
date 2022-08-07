@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Image } from "cloudinary-react";
-// require("dotenv").config({
-//   path: "../../../server/.env",
-// });
+require("dotenv").config({
+  path: "../../../server/.env",
+});
 
 function Home() {
   const [test, setTest] = useState([]);

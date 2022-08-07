@@ -23,7 +23,7 @@ function Home() {
 
     try {
       const res = await fetch(`/api/testFolder1000`);
-      const data = await res.json();
+      const data = await Response.json();
       setTest(data);
     } catch (error) {
       console.error(error);

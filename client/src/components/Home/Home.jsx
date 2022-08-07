@@ -24,7 +24,7 @@ function Home() {
 
     try {
       // const res = await fetch(`/api/testFolder1000`);
-      const res = await axios.get('/api/testFolder1000')
+      const res = await axios.get('/api/italy')
       const data = await res.json();
       setTest(data);
     } catch (error) {

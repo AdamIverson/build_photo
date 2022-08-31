@@ -46,18 +46,18 @@ app.get(`/api/testFolder1000`, async (req, res) => {
 });
 
 // Serve static files
-// app.use(express.static("build"));
+app.use(express.static("build"));
 
-// const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3001;
 
 
-let port = process.env.PORT;
-if (port == null || port == "") {
-  port = 80;
-}
-else if (port === "production") {
-  app.use(express.static("client/build"));
-};
+// let port = process.env.PORT;
+// if (port == null || port == "") {
+//   port = 80;
+// }
+// else if (port === "production") {
+//   app.use(express.static("client/build"));
+// };
 // app.use(routes);
 
 

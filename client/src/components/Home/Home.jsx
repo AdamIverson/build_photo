@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Image } from "cloudinary-react";
 import axios from "axios";
 // require("dotenv").config({
-//   path: "../../../server/.env",
+//   path: "../../../.env",
 // });
 
 function Home() {
